@@ -26,7 +26,12 @@ mod tests {
         x2.set(2f32);
         x3.set(3f32);
 
-        let mut graph = add(add(x1.clone(), x2.clone()), x3.clone());
+        let mut graph = add(
+            add(
+                x1.clone(),
+                x2.clone()),
+            x3.clone()
+        );
         assert_eq!(graph.compute(), 1f32 + 2f32 + 3f32);
 
         x1.set(2f32);
@@ -42,7 +47,16 @@ mod tests {
 
         x1.set(1f32);
 
-        let mut graph = add(x1.clone(), add(x1.clone(), add(x1.clone(), x1.clone())));
+        let mut graph = add(
+            x1.clone(),
+            add(
+                x1.clone(),
+                add(
+                    x1.clone(),
+                    x1.clone()
+                )
+            )
+        );
 
         assert_eq!(graph.compute(), 1f32 + 1f32 + 1f32 + 1f32);
     }
@@ -55,7 +69,17 @@ mod tests {
 
         let mut graph = add(
             x1.clone(),
-            mul(x2.clone(), sin(add(x2.clone(), pow_f32(x3.clone(), 3f32)))),
+            mul(
+                x2.clone(),
+                sin(
+                    add(
+                        x2.clone(),
+                        pow_f32(
+                            x3.clone(),
+                            3f32)
+                    )
+                )
+            ),
         );
         x1.set(1f32);
         x2.set(2f32);
