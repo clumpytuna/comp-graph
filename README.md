@@ -1,5 +1,5 @@
 # Computational graph lib
-A tiny computational graph library. Imlpements a dynamically built DAG with simple operations such as Add, Mul, Pow, etc. Caching feature is implemented, so only neccessary parts of a graph are reculculated.
+A tiny computational graph library. Implements a dynamically built DAG with simple operations such as Add, Mul, Pow, etc. Caching feature is implemented, so only necessary parts of a graph are recalculated.
 
 ### Example usage
 Below is an example showing possible supported operations:
